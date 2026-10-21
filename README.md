@@ -26,3 +26,10 @@ The trade-off: we do not attempt to classify the data, pick a "byte" vs "charact
 
 * `shannon_entropy_bits(data: str) -> float` — entropy in bits per symbol.
 * `shannon_entropy(data: str) -> float` — alias; same unit (bits).
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
