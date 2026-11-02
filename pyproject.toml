@@ -1,6 +1,6 @@
 [project]
 name = "shannon-entropy-calculator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Shannon entropy calculator that treats each Unicode code point as a single symbol"
 requires-python = ">=3.10"
 dependencies = []
